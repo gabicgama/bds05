@@ -3,6 +3,7 @@ package com.devsuperior.movieflix.dto;
 import java.io.Serializable;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import com.devsuperior.movieflix.entities.Review;
@@ -10,14 +11,13 @@ import com.devsuperior.movieflix.entities.Review;
 public class ReviewDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	@NotBlank
 	private Long id;
 	@NotBlank
 	@Size(max = 255)
 	private String text;
-	@NotBlank
+	@NotNull
 	private Long userId;
-	@NotBlank
+	@NotNull
 	private Long movieId;
 
 	public ReviewDTO() {
